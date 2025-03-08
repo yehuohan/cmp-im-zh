@@ -8,8 +8,8 @@ local function tables(names)
 	return tbls
 end
 
-local function symbols()
-	return {
+local function symbols(cmp_or_map)
+	local syms = {
 		["`"] = "·",
 		["!"] = "！",
 		["$"] = "￥",
@@ -21,8 +21,8 @@ local function symbols()
 		["\\"] = "、",
 		[":"] = "：",
 		[";"] = "；",
-		["'"] = "‘’<Left>", -- As auto pair
-		['"'] = "“”<Left>", -- As auto pair
+		["'"] = "‘’<Left>", -- As auto pair for map
+		['"'] = "“”<Left>", -- As auto pair for map
 		[","] = "，",
 		["."] = "。",
 		["<"] = "《",
@@ -30,6 +30,11 @@ local function symbols()
 		["?"] = "？",
 		["_"] = "——",
 	}
+	if cmp_or_map then
+		syms["'"] = { "‘", "’" }
+		syms['"'] = { "“", "”" }
+	end
+	return syms
 end
 
 return {
