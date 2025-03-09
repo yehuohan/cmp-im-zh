@@ -1,6 +1,6 @@
 # cmp-im-zh
 
-用于[cmp-im](https://github.com/yehuohan/cmp-im)的中文码表：
+用于[cmp-im](https://github.com/yehuohan/cmp-im)和[blink-cmp-im](https://github.com/yehuohan/blink-cmp-im)的中文码表：
 
 ## 中文码表
 
